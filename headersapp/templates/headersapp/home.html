@@ -1,0 +1,42 @@
+{% extends "headersapp/base.html" %}
+
+{% block styles %}
+    <style>
+        .description {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: orange;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .button:hover {
+            background-color: #FFCC80; /* Darker shade of blue on hover */
+        }
+    
+        .button:active {
+            background-color: #FFD699; /* Even darker shade of blue when pressed */
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="title">CSE Technical Project by Cloudflare</div>
+    <div class="author">David Aragon</div>
+    <div class="description">Click to return all HTTP request headers</div>
+    <form action="{% url 'headers' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="button">Get Headers</button>
+    </form>
+</div>
+{% endblock content %}
+

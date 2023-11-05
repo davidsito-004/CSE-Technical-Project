@@ -1,0 +1,68 @@
+{% extends "headersapp/base.html" %}
+
+{% block styles %}
+<style>
+    body {
+        background-color: black;
+        color: #ffffff; /* Light text color for better contrast on black background */
+    }
+
+    .home-button {
+        font-size: 18px;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: orange;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 20px;
+        transition: background-color 0.3s ease; /* Smooth transition for background color change */
+    }
+
+    .home-button:hover {
+        background-color: #FFCC80; /* Darker shade of blue on hover */
+    }
+
+    .home-button:active {
+        background-color: #FFD699; /* Even darker shade of blue when pressed */
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: orange;
+        text-align: left;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #333333; /* Dark gray background color for list items */
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    li strong {
+        color: #007bff;
+    }
+</style>
+{% endblock styles %}
+
+
+
+{% block content %}
+    <a href="{% url 'headers-home' %}" class="home-button">Home</a>
+    <h1>HTTP Headers</h1>
+    <ul>
+        {% for header in headers %}
+        <li>{{ header.0 }}: {{ header.1 }}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
