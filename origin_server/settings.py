@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3nme2a-6c(+_+s3z9=fwo-f&*laq3c+6hnx6_(s$rfo&tzd_+8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["web-production-c5fb.up.railway.app", "brunitoproject.lat", "www.brunitoproject.lat"]
+#ALLOWED_HOSTS = ["web-production-c5fb.up.railway.app", "brunitoproject.lat", "www.brunitoproject.lat"]
+ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS=["https://web-production-c5fb.up.railway.app", "https://brunitoproject.lat", "https://www.brunitoproject.lat"]
 
