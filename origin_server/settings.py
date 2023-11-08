@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["web-production-c5fb.up.railway.app", "brunitoproject.lat", "www.brunitoproject.lat"]
 
-CSRF_TRUSTED_ORIGINS=["web-production-c5fb.up.railway.app", "brunitoproject.lat", "www.brunitoproject.lat"]
+CSRF_TRUSTED_ORIGINS=["https://web-production-c5fb.up.railway.app", "brunitoproject.lat", "www.brunitoproject.lat"]
 
 
 # Application definition
